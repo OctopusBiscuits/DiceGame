@@ -178,6 +178,7 @@ namespace DiceGame
         // Objects
         Game GameTest = new Game();
 
+        // Method
         public void Testing()
         {
 
