@@ -39,9 +39,11 @@ namespace DiceGame
     */
     class Game
     {
-        // objects
+        // Objects
 
         Dice Die = new Dice();
+        Dice Die_2 = new Dice();
+        Dice Die_3 = new Dice();
 
         protected List <int> DiceResults = new List<int>();
 
@@ -59,13 +61,25 @@ namespace DiceGame
         // A Method that Rolls a set of three dice, adds the result to a list object and then calculates the total using the built-in .Sum method
         internal void InitialRoll()
         {
-
+         
+            // Variable
             int Counter = 0;
+
+
+            // Rolls three different Die objects and adds the result of each to the list 'DiceResults
+
+            DiceResults.Add(Die.Roll());
+            DiceResults.Add(Die_2.Roll());
+            DiceResults.Add(Die_3.Roll());
+
+            /*
+            // Uses a Dice object in a for loop 3 times and adds each result into the DiceResults list
 
             for (int x = 0; x < 3; x++) 
             {
                 DiceResults.Add(Die.Roll());
             }
+            */
 
             Console.WriteLine("--");
 
@@ -178,6 +192,7 @@ namespace DiceGame
         // Objects
         Game GameTest = new Game();
 
+        // Method
         public void Testing()
         {
 
